@@ -8,11 +8,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import br.com.fabio.jdbc.model.Pessoa;
 
 public class PessoaDAO {
 	
 	private Connection conn;
+	private DataSource pool;
 
 	public PessoaDAO(Connection conn) {
 		this.conn = conn;
@@ -75,4 +78,6 @@ public class PessoaDAO {
 		
 		return pessoas;
 	}
+
+
 }
